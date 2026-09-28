@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Roger_BStack_testng_browserstack_harness_1790602052057-push-trigger-input-set
+  identifier: Build_Roger_BStack_testng_browserstack_harness_1790602052057pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Roger_BStack_testng_browserstack_harness_1790602052057
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
