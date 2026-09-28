@@ -1,0 +1,17 @@
+- step:
+    type: Run
+    name: BrowserStack Automate Selenium Tests
+    identifier: browserstack_selenium_tests
+    spec:
+      shell: Sh
+      command: |
+        # Optional: Set up your environment dependencies (Example: Java/Maven)
+        # mvn test-compile
+        
+        # Execute your Selenium test suite
+        # The test scripts should pull credentials from the environment variables below
+        mvn test -DsuiteXmlFile=testng.xml
+      envVariables:
+        BROWSERSTACK_USERNAME: <+secrets.getValue("browserstack_username")>
+        BROWSERSTACK_ACCESS_KEY: <+secrets.getValue("browserstack_access_key")>
+        BROWSERSTACK_BUILD_NAME: <+pipeline.identifier>-<+pipeline.sequenceId>
