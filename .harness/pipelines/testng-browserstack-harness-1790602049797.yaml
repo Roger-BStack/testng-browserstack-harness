@@ -32,7 +32,7 @@ pipeline:
                       # Execute your Selenium test suite
                       # The test scripts should pull credentials from the environment variables below
                       #mvn test -DsuiteXmlFile=testng.xml
-                      mvn test -Dconfig.file=config/homepage-signin-popup-test.testng.xml
+                      mvn test -DsuiteXmlFile=config/homepage-signin-popup-test.testng.xml
                     envVariables:
                       BROWSERSTACK_USERNAME: <+secrets.getValue("browserstack_username")>
                       BROWSERSTACK_ACCESS_KEY: <+secrets.getValue("browserstack_access_key")>
